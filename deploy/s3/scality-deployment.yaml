@@ -16,7 +16,9 @@ spec:
         app: scality
     spec:
       containers:
-        - image: quay.io/ocpmetal/s3server
+        - image: bm-cluster-1-hyper.e2e.bos.redhat.com:5000/jparrill/s3server
+          securityContext:
+            runAsUser: 0
           imagePullPolicy: Always
           name: s3server
           env:
@@ -92,8 +94,7 @@ spec:
               memory: 2000Mi
       volumes:
         - name: scalityvol
-          persistentVolumeClaim:
-            claimName: scality-pv-claim
+          emptyDir: {}
 ---
 apiVersion: v1
 kind: Service

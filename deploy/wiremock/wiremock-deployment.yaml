@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: wiremock
-          image: quay.io/ocpmetal/wiremock
+          image: bm-cluster-1-hyper.e2e.bos.redhat.com:5000/ocpmetal/wiremock
           imagePullPolicy: "IfNotPresent"
           ports:
             - containerPort: 8080

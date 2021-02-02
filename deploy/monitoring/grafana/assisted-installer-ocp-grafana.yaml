@@ -24,7 +24,7 @@ spec:
       containers:
       - args:
         - -config=/etc/grafana/grafana.ini
-        image: quay.io/openshift/origin-grafana:latest
+        image: bm-cluster-1-hyper.e2e.bos.redhat.com:5000/openshift/origin-grafana:latest
         imagePullPolicy: IfNotPresent
         name: grafana
         ports:
@@ -64,7 +64,7 @@ spec:
         - -openshift-ca=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt
         - -openshift-ca=/etc/proxy/custom-ca/ca.crt
         - -skip-auth-regex=^/metrics
-        image: quay.io/openshift/origin-oauth-proxy:4.7
+        image: bm-cluster-1-hyper.e2e.bos.redhat.com:5000/openshift/origin-oauth-proxy:4.7
         imagePullPolicy: IfNotPresent
         name: oauth-proxy
         ports:

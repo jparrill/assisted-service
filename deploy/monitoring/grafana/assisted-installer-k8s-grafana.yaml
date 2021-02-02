@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: grafana
-        image: quay.io/openshift/origin-grafana:latest
+        image: bm-cluster-1-hyper.e2e.bos.redhat.com:5000/openshift/origin-grafana:latest
         imagePullPolicy: IfNotPresent
         ports:
         - name: grafana

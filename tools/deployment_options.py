@@ -5,7 +5,7 @@ import requests
 import yaml
 
 
-IMAGE_FQDN_TEMPLATE = "quay.io/ocpmetal/{}:{}"
+IMAGE_FQDN_TEMPLATE = "bm-cluster-1-hyper.e2e.bos.redhat.com:5000/ocpmetal/{}:{}"
 
 
 def load_deployment_options(parser=None):
