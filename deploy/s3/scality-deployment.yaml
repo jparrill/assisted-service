@@ -17,8 +17,6 @@ spec:
     spec:
       containers:
         - image: bm-cluster-1-hyper.e2e.bos.redhat.com:5000/jparrill/s3server
-          securityContext:
-            runAsUser: 0
           imagePullPolicy: Always
           name: s3server
           env:
